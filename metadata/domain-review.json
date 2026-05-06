@@ -1,0 +1,73 @@
+{
+  "repo": "zenith-sim-scheduler-lab",
+  "language": "C#",
+  "category": "Simulations",
+  "goal": "Create a C# reference implementation for scheduler workflows, centered on constraint solving, bounded scenario files, and conflict explanations.",
+  "review_model": {
+    "terms": [
+      "input pressure",
+      "state drift",
+      "review cost",
+      "decision risk"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "input pressure",
+      "signal": 76,
+      "slack": 49,
+      "drag": 27,
+      "confidence": 46,
+      "score": 166,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "state drift",
+      "signal": 52,
+      "slack": 45,
+      "drag": 11,
+      "confidence": 45,
+      "score": 161,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "review cost",
+      "signal": 57,
+      "slack": 23,
+      "drag": 20,
+      "confidence": 82,
+      "score": 159,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "decision risk",
+      "signal": 70,
+      "slack": 28,
+      "drag": 16,
+      "confidence": 66,
+      "score": 186,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "input pressure",
+      "signal": 90,
+      "slack": 33,
+      "drag": 9,
+      "confidence": 62,
+      "score": 248,
+      "lane": "ship"
+    }
+  ]
+}
